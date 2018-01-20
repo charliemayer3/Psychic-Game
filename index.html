@@ -27,8 +27,8 @@
 
       var letterGuessed = event.key.toLowerCase();
 
-      if(alphabet.indexOf(letterGuessed) >= 0) {
-        guessesSoFar.push(" " + letterGuessed);
+      if(alphabet.indexOf(letterGuessed) >= 0 && guessesSoFar.indexOf(letterGuessed) === -1) {
+        guessesSoFar.push(letterGuessed);
         guessesLeft--;
         // console.log(randomLetter);
       }
